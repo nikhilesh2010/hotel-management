@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import ThemeContext from "@/context/ThemeContext";
 
 const ThemeProvider = ({ children }: { children: React.ReactNode } ) => {
-  const themeFromStorage: boolean = typeof(localStorage) !== "undefined" && localStorage.getItem('hotel-theme') ? JSON.parse(localStorage.getItem('hotel-theme')!) : 'false';
+  const themeFromStorage: boolean = typeof window !== "undefined" && localStorage.getItem('hotel-theme') ? JSON.parse(localStorage.getItem('hotel-theme')!) : false;
   // let themeFromStorage = typeof(localStorage) !== "undefined" && localStorage.getItem('hotel-theme'); 
   // console.log(themeFromStorage);
   // themeFromStorage = themeFromStorage ? JSON.parse(localStorage.getItem('hotel-theme')!) : 'false';
@@ -14,6 +14,14 @@ const ThemeProvider = ({ children }: { children: React.ReactNode } ) => {
   useEffect(() => {
     setRenderComponent(true);
   }, []);
+
+  // Use useEffect to update localStorage whenever darkTheme changes
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem('hotel-theme', JSON.stringify(darkTheme));
+    }
+  }, [darkTheme]);
+
   if (!renderComponent) {
     return <></>;
   }
