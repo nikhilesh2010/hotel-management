@@ -72,7 +72,7 @@ const Auth = () => {
           <input type="email" name="email" placeholder="nikhi@mail.com" required className={inputStyles} value={formData.email} onChange={handleInputChange} />
           <input type="text" name="name" placeholder="Nikhi Chirutala" required className={inputStyles} value={formData.name} onChange={handleInputChange} />
           <input type="password" name="password" placeholder="password" minLength={6} required className={inputStyles} value={formData.password} onChange={handleInputChange} />
-          <button type="submit" className="w-full bg-teritary-dark focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center">Sign Up</button>
+          <button type="submit" className="w-full bg-tertiary-dark focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center">Sign Up</button>
         </form>
         <button  onClick={loginHandler} type="submit" className="text-blue-700 underline">login</button>
       </div>

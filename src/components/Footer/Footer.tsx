@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="mt-16">
       <div className="container mx-auto px-4">
-        <Link href='/' className="font-black text-teritary-dark">N Star Hotelzz</Link>
+        <Link href='/' className="font-black text-tertiary-dark">N Star Hotelzz</Link>
         <h4 className="font-semibold text-[40px] py-6">Contact</h4>
         <div className="flex flex-wrap gap-16 items-center justify-between">
           <div className="flex-1">
@@ -40,7 +40,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="bg-teritary-light h-10 md:h-[70px] mt-16 w-full bottom-0 left-0"></div>
+      <div className="bg-tertiary-light h-10 md:h-[70px] mt-16 w-full bottom-0 left-0"></div>
     </footer>
   )
 }
