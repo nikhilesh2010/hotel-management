@@ -1,5 +1,5 @@
-import ClientComponent from "../Header/ClientComponent"
-import { heading1, section2 } from "../Header/ServerComponent"
+import ClientComponent from "./ClientComponent"
+import { heading1, section2 } from "./ServerComponent"
 
 const HeroSection = () => {
     return (

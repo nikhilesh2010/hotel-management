@@ -11,7 +11,7 @@ const ClientComponent: FC<Props> = (props) => {
     const { heading1, section2 } = props;
     return (
         <div>
-            <section className="flex px-16 items-center gap-12 container mx-auto">
+            <section className="flex items-center gap-12 container mx-auto">
                 <div className="py-10 h-full ">
                     {/* Heading */}
                     {heading1}
